@@ -18,13 +18,7 @@ Each day, I solve at least one DSA problem and upload the solution here.
 
 ---
 
-## 🚀 How to Use
 
-- Each folder (Day1, Day2, ...) contains:
-  - A `problem.md` file describing the problem statement.
-  - A `solution.py` (or `.cpp`, `.java`, etc.) file with the solution and comments.
-
----
 
 ## 🔗 Useful Resources
 
