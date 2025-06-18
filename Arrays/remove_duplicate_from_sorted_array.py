@@ -8,3 +8,6 @@ def remove_duplicate(list1):
     return sorted_array
 print(remove_duplicate([1,1,1,2,2,3,3,4,5]))
 
+
+
+

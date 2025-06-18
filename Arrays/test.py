@@ -90,4 +90,12 @@
 
 
 
+def remove_duplicate(arr):
+    lft = 1
+    for rgt in range(1,len(arr)):
+        if arr[rgt] != arr[lft-1]:
+            arr[lft] = arr[rgt]
+            lft+=1
+    return arr[:lft]
 
+print(remove_duplicate([1,1,2,2,2,3,3,4,5,6,7,7,7,9,8,8]))
