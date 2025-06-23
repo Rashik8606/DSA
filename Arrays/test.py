@@ -241,13 +241,11 @@
 def count_vowls_consonant(arr):
     vowels = 0
     consonant = 0
-    for i in arr:
-        if i in 'aeiouAEIOU':
+    for i in range(len(arr)):
+        if arr[i] in 'aeiouAEIOU':
             vowels += 1
-            print('This is vowels')
         elif i:
             consonant +=1
-            print('This is not vowlels this is consonant')
     return vowels, consonant
 
 print(count_vowls_consonant('rashik'))
