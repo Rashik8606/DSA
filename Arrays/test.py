@@ -293,3 +293,24 @@ def find_sum_num(arr,targetNum):
     return empty_arr
 
 print(find_sum_num([1,4,5,6,73,7],9))
+
+
+def subArraySum(array,targetSum):
+    start = 0
+    currentSum = 0
+
+    for end in range(len(array)):
+        currentSum += array[end]
+
+        while currentSum > targetSum and start <= end:
+            currentSum -= array[start]
+            start +=1 
+
+        if currentSum == targetSum:
+            return array[start:end+1]
+        
+    return f'not found yet'
+print(subArraySum([1, 4, 20, 3, 10, 5], 33)) 
+
+
+
