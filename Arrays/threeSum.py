@@ -5,37 +5,36 @@ array2 = [0,0,0]   # output will be [[0,0,0]]
 
 target = 0
 
-def threeSum(array, target):
-    result_arr = []
-    array.sort()
-    num = len(array)
+def threeSum(array, target=0):
+    empty_list = []
+    array = sorted(array)   
+    nums = len(array)
 
-    for i in range(num):
-        if array[i] > 0 :  # break early — because all future numbers will be positive, and the sum can't be 0.
+    for i in range(nums):
+        if array[i] > 0:
             break
-        if i > 0 and array[i] == array[i-1]:  #  skip to avoid duplicates.
+        if i > 0 and array[i] == array[i-1]:
             continue
-        
-        low = i+1
-        high = num-1
 
-        while low < high :
+        low = i+1
+        high = nums -1
+
+        while low < high:
             currentSum = array[i] + array[low] + array[high]
             if currentSum == 0:
-                result_arr.append([array[i], array[low], array[high]])
-                low +=1
-                high -=1
-
+                empty_list.append([array[i], array[low], array[high]])
+                low+=1
+                high-=1
                 while low < high and array[low] == array[low-1]:
                     low +=1
-                while low < high and array[high] == array[high+1]:
+                while low < high and array[high] == array[high +1]:
                     high -=1
-            elif currentSum < 0:
+            elif currentSum > 0:
                 low +=1
             else:
                 high -=1
-
-    return result_arr
+    return empty_list
+            
 
 print(threeSum(array,target))
 print(threeSum(array1,target))
