@@ -3,16 +3,17 @@
 
 lis1 = [1,2,3,4,5,6]
 target = 9
-def two_Sum(arr1, tar):
-    nums = len(arr1)
-    i = 0
-    while i < nums:
-        j = i+1
-        while j < nums:
-            if arr1[i] + arr1[j] == tar:
-                return [i,j]
-            j+=1
-        i+=1
-    return [-1,-1]
 
-print(two_Sum(lis1, target))
+def two_Sum(arr1, target):
+    nums = len(arr1)
+    count_num = 0
+    while count_num < nums:
+        sec_count_num = count_num + 1
+        while sec_count_num < nums:
+            if arr1[count_num] + arr1[sec_count_num] == target:
+                return [count_num, sec_count_num]
+            sec_count_num+=1
+        count_num+=1
+    return [-1, -1]
+
+print(two_Sum(lis1, target)) 
