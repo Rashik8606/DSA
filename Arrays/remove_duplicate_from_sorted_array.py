@@ -14,15 +14,12 @@ print(remove_duplicate([1,1,1,2,2,3,3,4,5]))
 # LEETCODE QUESTION 27 Remove Elements
 
 def remove_Elements(array, val):
-
     pointer = 0
-    for i in range(0,len(array)):
+
+    for i in range(0, len(array)):
         if array[i] != val:
             array[pointer] = array[i]
-            pointer+=1
+            pointer +=1 
     return pointer
 
-test = [3,2,2,3]
-val = 3
-
-print(remove_Elements(test, val))
+print(remove_Elements([1,1,2,3,4,5,5,7], 1))
